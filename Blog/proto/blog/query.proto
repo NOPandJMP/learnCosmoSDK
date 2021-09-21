@@ -1,0 +1,30 @@
+syntax = "proto3";
+
+package cosmonaut.blog.blog;
+
+import "blog/post.proto";
+import "google/api/annotations.proto";
+import "cosmos/base/query/v1beta1/pagination.proto";
+// this line is used by starport scaffolding # 1
+
+option go_package = "github.com/cosmonaut/blog/x/blog/types";
+
+// Query defines the gRPC querier service.
+service Query {
+    rpc Posts(QueryPostsRequest) returns (QueryPostsResponse) {
+		option (google.api.http).get = "/cosmonaut/Blog/blog/posts";
+	}
+}
+
+// this line is used by starport scaffolding # 3
+message QueryPostsRequest {
+    // Adding pagination to request
+    cosmos.base.query.v1beta1.PageRequest pagination = 1;
+}
+  
+message QueryPostsResponse {
+    // Returning a list of posts
+    repeated Post Post = 1;
+    // Adding pagination to response
+    cosmos.base.query.v1beta1.PageResponse pagination = 2;
+}
