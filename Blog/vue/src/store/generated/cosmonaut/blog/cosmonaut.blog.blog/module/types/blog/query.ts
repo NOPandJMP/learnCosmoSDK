@@ -154,6 +154,7 @@ export const QueryPostsResponse = {
 
 /** Query defines the gRPC querier service. */
 export interface Query {
+  /** Queries a list of posts items. */
   Posts(request: QueryPostsRequest): Promise<QueryPostsResponse>
 }
 

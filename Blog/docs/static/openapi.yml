@@ -4,8 +4,9 @@ info:
   name: ''
   description: ''
 paths:
-  /cosmonaut/Blog/blog/posts:
+  /cosmonaut/blog/blog/posts:
     get:
+      summary: Queries a list of posts items.
       operationId: CosmonautBlogBlogPosts
       responses:
         '200':

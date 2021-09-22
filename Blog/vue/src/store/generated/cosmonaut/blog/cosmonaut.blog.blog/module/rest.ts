@@ -306,7 +306,8 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
    *
    * @tags Query
    * @name QueryPosts
-   * @request GET:/cosmonaut/Blog/blog/posts
+   * @summary Queries a list of posts items.
+   * @request GET:/cosmonaut/blog/blog/posts
    */
   queryPosts = (
     query?: {
@@ -318,7 +319,7 @@ export class Api<SecurityDataType extends unknown> extends HttpClient<SecurityDa
     params: RequestParams = {},
   ) =>
     this.request<BlogQueryPostsResponse, RpcStatus>({
-      path: `/cosmonaut/Blog/blog/posts`,
+      path: `/cosmonaut/blog/blog/posts`,
       method: "GET",
       query: query,
       format: "json",

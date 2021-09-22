@@ -1,7 +1,8 @@
 package keeper
 
-import (
+/* import (
 	"github.com/cosmonaut/blog/x/blog/types"
 )
 
 var _ types.QueryServer = Keeper{}
+*/

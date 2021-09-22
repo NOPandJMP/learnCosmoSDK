@@ -144,7 +144,8 @@ export declare class Api<SecurityDataType extends unknown> extends HttpClient<Se
      *
      * @tags Query
      * @name QueryPosts
-     * @request GET:/cosmonaut/Blog/blog/posts
+     * @summary Queries a list of posts items.
+     * @request GET:/cosmonaut/blog/blog/posts
      */
     queryPosts: (query?: {
         "pagination.key"?: string;

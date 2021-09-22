@@ -141,10 +141,11 @@ export class Api extends HttpClient {
          *
          * @tags Query
          * @name QueryPosts
-         * @request GET:/cosmonaut/Blog/blog/posts
+         * @summary Queries a list of posts items.
+         * @request GET:/cosmonaut/blog/blog/posts
          */
         this.queryPosts = (query, params = {}) => this.request({
-            path: `/cosmonaut/Blog/blog/posts`,
+            path: `/cosmonaut/blog/blog/posts`,
             method: "GET",
             query: query,
             format: "json",
